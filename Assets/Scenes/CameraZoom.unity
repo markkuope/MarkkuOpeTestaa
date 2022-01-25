@@ -321,7 +321,7 @@ Camera:
   m_GameObject: {fileID: 1278580953}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.4745098, g: 0.19215688, b: 0.22718617, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -401,12 +401,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce33e58d62c1f3c43b48364060872b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minZoom2D: 5
+  minZoom2D: 1
   maxZoom2D: 10
-  zoomSpeed2D: 5
-  minZoom3D: 3
-  maxZoom3D: 9
-  zoomSpeed3D: 5
+  zoomSpeed2D: 50
+  minZoom3D: 10
+  maxZoom3D: 100
+  zoomSpeed3D: 600
 --- !u!65 &1355275504
 BoxCollider:
   m_ObjectHideFlags: 0

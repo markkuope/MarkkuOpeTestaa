@@ -21,18 +21,19 @@ public class CameraZoom : MonoBehaviour {
         //2D Camera
         if (Camera.main.orthographic)
         {
-            if(Input.GetAxis("Mouse ScrollWheel") > 0)
+            if(Input.GetAxis("Mouse ScrollWheel") > 0) //pyöritys itsestä poispäin
             {
                 //ZoomIn
                 Camera.main.orthographicSize -= zoomSpeed2D * Time.deltaTime;
             }
-            if(Input.GetAxis("Mouse ScrollWheel") < 0)
+            if(Input.GetAxis("Mouse ScrollWheel") < 0) //pyöritys itseenpäin
             {
                 //Zoom out
                 Camera.main.orthographicSize += zoomSpeed2D * Time.deltaTime;
             }
 
-            //Restrict The Value
+            //Rajoitetaan zoomausta Mathf.Clamp :n avulla
+            // argumentteina (mitä rajoitetaan,  min , max)
             Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, minZoom2D, maxZoom2D);
         }
         else
@@ -49,7 +50,8 @@ public class CameraZoom : MonoBehaviour {
                 Camera.main.fieldOfView += zoomSpeed3D * Time.deltaTime;
             }
 
-            //Restrict The Value
+            //Rajoitetaan zoomausta Mathf.Clamp :n avulla
+            // argumentteina (mitä rajoitetaan,  min , max)
             Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, minZoom3D, maxZoom3D);
 
         }
