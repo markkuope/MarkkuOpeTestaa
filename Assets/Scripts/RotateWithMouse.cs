@@ -12,7 +12,7 @@ public class RotateWithMouse : MonoBehaviour {
         float Y = Input.GetAxis("Mouse Y") * rotationSpeed;
         float X = Input.GetAxis("Mouse X") * rotationSpeed;
 
-        transform.Rotate(Vector3.right, Y);
-        transform.Rotate(Vector3.up, -X);
+        transform.Rotate(Vector3.right, Y); // pyöritys X -akselin ympäri
+        transform.Rotate(Vector3.up, -X);   // pyöritys Y -akselin ympäri
     }
 }
